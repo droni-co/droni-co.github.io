@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,600&family=Pacifico&display=swap');
+
+.ff-mon {
+  font-family: 'Montserrat', sans-serif;
+}
+.ff-pac {
+  font-family: 'Pacifico', cursive;
+}
+.bg-mid-white {
+  background-color: rgba(255,255,255,0.8);
+}
+
+header {
+  background: linear-gradient(228deg, #352f6b, #7d6cc8, #e025ff);
+  background-size: 600% 600%;
+
+  -webkit-animation: AnimationName 10s ease infinite;
+  -moz-animation: AnimationName 10s ease infinite;
+  animation: AnimationName 10s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0%{background-position:17% 0%}
+  50%{background-position:84% 100%}
+  100%{background-position:17% 0%}
+}
+@-moz-keyframes AnimationName {
+  0%{background-position:17% 0%}
+  50%{background-position:84% 100%}
+  100%{background-position:17% 0%}
+}
+@keyframes AnimationName {
+  0%{background-position:17% 0%}
+  50%{background-position:84% 100%}
+  100%{background-position:17% 0%}
+}
+.bogborder {
+  border: 10px solid #f2f2f2;
+}
+
+ul.timeline {
+  list-style-type: none;
+  position: relative;
+}
+ul.timeline:before {
+  content: ' ';
+  background: #d4d9df;
+  display: inline-block;
+  position: absolute;
+  left: 29px;
+  width: 2px;
+  height: 100%;
+  z-index: 400;
+}
+ul.timeline > li {
+  margin: 20px 0;
+  padding-left: 20px;
+}
+ul.timeline > li:before {
+  content: ' ';
+  background: white;
+  display: inline-block;
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid #22c0e8;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+  z-index: 400;
+}
+.contact {
+  display: block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.contact li {
+  display: block;
+  border-bottom: 1px dashed #CCCCCC;
+  padding: 7px 15px;
+}
