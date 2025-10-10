@@ -36,11 +36,11 @@
                     },
                     colors: {
                         'primary': {
-                            50: '#f0f9ff',
-                            500: '#3b82f6',
-                            600: '#2563eb',
-                            700: '#1d4ed8',
-                            900: '#1e3a8a'
+                            50: '#f8fafc',
+                            500: '#71717a',
+                            600: '#52525b',
+                            700: '#3f3f46',
+                            900: '#18181b'
                         },
                         'tech': {
                             'php': '#777bb4',
@@ -82,8 +82,8 @@
                             '100%': { opacity: '1', transform: 'translateX(0)' }
                         },
                         'glow': {
-                            '0%': { boxShadow: '0 0 20px rgba(59, 130, 246, 0.5)' },
-                            '100%': { boxShadow: '0 0 30px rgba(59, 130, 246, 0.8)' }
+                            '0%': { boxShadow: '0 0 20px rgba(113, 113, 122, 0.5)' },
+                            '100%': { boxShadow: '0 0 30px rgba(113, 113, 122, 0.8)' }
                         }
                     }
                 }
@@ -130,11 +130,11 @@
         
         /* Custom gradient backgrounds */
         .gradient-bg {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #52525b 0%, #3f3f46 100%);
         }
         
         .dark .gradient-bg {
-            background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 100%);
+            background: linear-gradient(135deg, #18181b 0%, #27272a 100%);
         }
         
         /* Progress bar animations */
@@ -173,7 +173,7 @@
             top: 0;
             bottom: 0;
             width: 2px;
-            background: linear-gradient(to bottom, #3b82f6, #8b5cf6);
+            background: linear-gradient(to bottom, #71717a, #52525b);
         }
         
         .timeline-item {
@@ -190,14 +190,14 @@
             width: 12px;
             height: 12px;
             border-radius: 50%;
-            background: #3b82f6;
+            background: #71717a;
             border: 3px solid #fff;
-            box-shadow: 0 0 0 3px #3b82f6;
+            box-shadow: 0 0 0 3px #71717a;
         }
         
         .dark .timeline-item::before {
             border-color: #1f2937;
-            box-shadow: 0 0 0 3px #3b82f6;
+            box-shadow: 0 0 0 3px #71717a;
         }
     </style>
 </head>
@@ -211,18 +211,30 @@
 
     <!-- Header Section -->
     <header class="min-h-screen flex items-center justify-center gradient-bg relative overflow-hidden">
+        <!-- Background banner image -->
+        <div class="absolute inset-0 overflow-hidden">
+            <img src="./img/bg.jpg" 
+                 alt="Background banner" 
+                 class="w-full h-full object-cover opacity-60 dark:opacity-50">
+            <div class="absolute inset-0 bg-gradient-to-br from-zinc-800/40 via-zinc-900/40 to-gray-900/40 dark:from-zinc-900/50 dark:via-black/50 dark:to-zinc-800/50"></div>
+        </div>
+        
         <!-- Animated background elements -->
         <div class="absolute inset-0 overflow-hidden no-print">
-            <div class="absolute -top-40 -right-40 w-80 h-80 bg-white dark:bg-blue-500 rounded-full opacity-10 animate-pulse-slow"></div>
-            <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-white dark:bg-purple-500 rounded-full opacity-10 animate-float"></div>
-            <div class="absolute top-1/2 left-1/4 w-32 h-32 bg-white dark:bg-cyan-500 rounded-full opacity-20 animate-pulse"></div>
+            <div class="absolute -top-40 -right-40 w-80 h-80 bg-white dark:bg-zinc-500 rounded-full opacity-10 animate-pulse-slow"></div>
+            <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-white dark:bg-zinc-600 rounded-full opacity-10 animate-float"></div>
+            <div class="absolute top-1/2 left-1/4 w-32 h-32 bg-white dark:bg-zinc-400 rounded-full opacity-20 animate-pulse"></div>
         </div>
         
         <div class="container mx-auto px-6 text-center relative z-10">
             <div class="animate-fade-in-down">
-                <img src="./img/gustavo_barragan.jpg" 
-                     alt="Gustavo Barragán" 
-                     class="w-48 h-48 md:w-56 md:h-56 rounded-full mx-auto mb-8 border-4 border-white shadow-2xl animate-glow">
+                <div class="relative">
+                    <img src="./img/gustavo_barragan.jpg" 
+                         alt="Gustavo Barragán" 
+                         class="w-48 h-48 md:w-56 md:h-56 rounded-full mx-auto mb-8 border-4 border-white shadow-2xl animate-glow relative z-10">
+                    <!-- Background circle for better contrast -->
+                    <div class="absolute inset-0 w-48 h-48 md:w-56 md:h-56 rounded-full mx-auto bg-white/10 backdrop-blur-sm border border-white/20 shadow-xl"></div>
+                </div>
             </div>
             
             <h1 class="text-5xl md:text-7xl font-bold text-white mb-4 animate-fade-in-up">
@@ -268,11 +280,11 @@
                     <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
                         Soy un desarrollador fullstack que se ha visto envuelto en casi todas las facetas del desarrollo web, 
                         desde el prototipado y generación de ideas, pasando por el montaje y normalización de bases de datos, 
-                        su desarrollo tanto en backend como en front, y su despliegue mantenimiento y soporte implementando 
+                        su desarrollo tanto en backend como en front, despliegue, mantenimiento y soporte implementando 
                         ciclo dev-ops.
                     </p>
                     <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-                        Soy un apasionado por trabajar nuevas tecnologías y aunque mi fuerte está en el desarrollo PHP/Laravel 
+                        Apasionado por trabajar nuevas tecnologías y aunque mi fuerte está en el desarrollo Node y PHP/Laravel 
                         del lado del servidor también he trabajado en proyectos con Ruby on Rails, Firebase, Google Cloud, 
                         entre otros. Respecto al desarrollo del Front, cuento con conocimiento y habilidades en UX/UI, SEO y 
                         SEM y trabajo sobre frameworks JS como Angular o Vue JS.
@@ -563,10 +575,10 @@
                                 usando Node.js y implementando herramientas disponibles en Azure Cloud de Microsoft.
                             </p>
                             <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 bg-tech-node text-white text-sm rounded-full">Node.js</span>
-                                <span class="px-3 py-1 bg-blue-500 text-white text-sm rounded-full">Azure</span>
-                                <span class="px-3 py-1 bg-purple-500 text-white text-sm rounded-full">Banking</span>
-                                <span class="px-3 py-1 bg-green-500 text-white text-sm rounded-full">Cloud</span>
+                                <span class="px-3 py-1 border border-tech-node text-tech-node text-sm rounded-full">Node.js</span>
+                                <span class="px-3 py-1 border border-blue-500 text-blue-500 text-sm rounded-full">Azure</span>
+                                <span class="px-3 py-1 border border-purple-500 text-purple-500 text-sm rounded-full">Banking</span>
+                                <span class="px-3 py-1 border border-green-500 text-green-500 text-sm rounded-full">Cloud</span>
                             </div>
                         </div>
                     </div>
@@ -584,12 +596,12 @@
                                 como CRM y pasarelas de pago usando BigQuery y Google DataStudio.
                             </p>
                             <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 bg-tech-php text-white text-sm rounded-full">PHP</span>
-                                <span class="px-3 py-1 bg-red-500 text-white text-sm rounded-full">Laravel</span>
-                                <span class="px-3 py-1 bg-tech-docker text-white text-sm rounded-full">Docker</span>
-                                <span class="px-3 py-1 bg-orange-500 text-white text-sm rounded-full">BigQuery</span>
-                                <span class="px-3 py-1 bg-tech-vue text-white text-sm rounded-full">Vue</span>
-                                <span class="px-3 py-1 bg-indigo-500 text-white text-sm rounded-full">CI/CD</span>
+                                <span class="px-3 py-1 border border-tech-php text-tech-php text-sm rounded-full">PHP</span>
+                                <span class="px-3 py-1 border border-red-500 text-red-500 text-sm rounded-full">Laravel</span>
+                                <span class="px-3 py-1 border border-tech-docker text-tech-docker text-sm rounded-full">Docker</span>
+                                <span class="px-3 py-1 border border-orange-500 text-orange-500 text-sm rounded-full">BigQuery</span>
+                                <span class="px-3 py-1 border border-tech-vue text-tech-vue text-sm rounded-full">Vue</span>
+                                <span class="px-3 py-1 border border-indigo-500 text-indigo-500 text-sm rounded-full">CI/CD</span>
                             </div>
                         </div>
                     </div>
@@ -607,12 +619,12 @@
                                 y desarrollé funcionalidades para IVRs en la plataforma Asterisk.
                             </p>
                             <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 bg-tech-php text-white text-sm rounded-full">PHP</span>
-                                <span class="px-3 py-1 bg-red-500 text-white text-sm rounded-full">Laravel</span>
-                                <span class="px-3 py-1 bg-tech-vue text-white text-sm rounded-full">Vue</span>
-                                <span class="px-3 py-1 bg-green-500 text-white text-sm rounded-full">Nuxt</span>
-                                <span class="px-3 py-1 bg-purple-500 text-white text-sm rounded-full">Asterisk</span>
-                                <span class="px-3 py-1 bg-blue-500 text-white text-sm rounded-full">Dialogflow</span>
+                                <span class="px-3 py-1 border border-tech-php text-tech-php text-sm rounded-full">PHP</span>
+                                <span class="px-3 py-1 border border-red-500 text-red-500 text-sm rounded-full">Laravel</span>
+                                <span class="px-3 py-1 border border-tech-vue text-tech-vue text-sm rounded-full">Vue</span>
+                                <span class="px-3 py-1 border border-green-500 text-green-500 text-sm rounded-full">Nuxt</span>
+                                <span class="px-3 py-1 border border-purple-500 text-purple-500 text-sm rounded-full">Asterisk</span>
+                                <span class="px-3 py-1 border border-blue-500 text-blue-500 text-sm rounded-full">Dialogflow</span>
                             </div>
                         </div>
                     </div>
@@ -629,11 +641,11 @@
                                 así como proyectos frontend con Angular 7 que consumían dichos servicios.
                             </p>
                             <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 bg-blue-600 text-white text-sm rounded-full">.NET</span>
-                                <span class="px-3 py-1 bg-tech-angular text-white text-sm rounded-full">Angular</span>
-                                <span class="px-3 py-1 bg-tech-php text-white text-sm rounded-full">PHP</span>
-                                <span class="px-3 py-1 bg-red-500 text-white text-sm rounded-full">Laravel</span>
-                                <span class="px-3 py-1 bg-green-600 text-white text-sm rounded-full">APIs</span>
+                                <span class="px-3 py-1 border border-blue-600 text-blue-600 text-sm rounded-full">.NET</span>
+                                <span class="px-3 py-1 border border-tech-angular text-tech-angular text-sm rounded-full">Angular</span>
+                                <span class="px-3 py-1 border border-tech-php text-tech-php text-sm rounded-full">PHP</span>
+                                <span class="px-3 py-1 border border-red-500 text-red-500 text-sm rounded-full">Laravel</span>
+                                <span class="px-3 py-1 border border-green-600 text-green-600 text-sm rounded-full">APIs</span>
                             </div>
                         </div>
                     </div>
@@ -651,12 +663,12 @@
                                 También desarrollé aplicaciones móviles usando Ionic.
                             </p>
                             <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 bg-cyan-500 text-white text-sm rounded-full">Ionic</span>
-                                <span class="px-3 py-1 bg-tech-angular text-white text-sm rounded-full">Angular</span>
-                                <span class="px-3 py-1 bg-red-500 text-white text-sm rounded-full">Laravel</span>
-                                <span class="px-3 py-1 bg-blue-700 text-white text-sm rounded-full">Drupal</span>
-                                <span class="px-3 py-1 bg-pink-500 text-white text-sm rounded-full">PrestaShop</span>
-                                <span class="px-3 py-1 bg-yellow-500 text-black text-sm rounded-full">Leadership</span>
+                                <span class="px-3 py-1 border border-cyan-500 text-cyan-500 text-sm rounded-full">Ionic</span>
+                                <span class="px-3 py-1 border border-tech-angular text-tech-angular text-sm rounded-full">Angular</span>
+                                <span class="px-3 py-1 border border-red-500 text-red-500 text-sm rounded-full">Laravel</span>
+                                <span class="px-3 py-1 border border-blue-700 text-blue-700 text-sm rounded-full">Drupal</span>
+                                <span class="px-3 py-1 border border-pink-500 text-pink-500 text-sm rounded-full">PrestaShop</span>
+                                <span class="px-3 py-1 border border-yellow-500 text-yellow-500 text-sm rounded-full">Leadership</span>
                             </div>
                         </div>
                     </div>
@@ -665,15 +677,294 @@
         </div>
     </section>
 
-    <!-- Education Section -->
+    <!-- Certifications Section -->
     <section class="py-20 bg-white dark:bg-gray-900">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-900 dark:text-white animate-fade-in-up">
+                Certificaciones <span class="text-primary-500">Profesionales</span>
+            </h2>
+            
+            <div class="max-w-6xl mx-auto">
+                <!-- Google Cybersecurity Certificates -->
+                <div class="mb-12">
+                    <div class="flex items-center mb-8">
+                        <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-green-500 rounded-xl flex items-center justify-center mr-4">
+                            <i class="fab fa-google text-white text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Google Cybersecurity</h3>
+                            <p class="text-gray-600 dark:text-gray-400">Programa especializado en seguridad cibernética</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Google Cybersecurity Certificate -->
+                        <div class="bg-gradient-to-br from-blue-50 to-green-50 dark:from-gray-800 dark:to-gray-700 rounded-xl p-6 border border-blue-200 dark:border-gray-600 animate-fade-in-up hover:shadow-lg transition-all duration-300">
+                            <div class="flex items-center mb-4">
+                                <div class="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center mr-3">
+                                    <i class="fas fa-certificate text-white"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h4 class="font-bold text-gray-900 dark:text-white text-sm">Google Cybersecurity Certificate</h4>
+                                    <p class="text-xs text-gray-600 dark:text-gray-400">Feb 2025</p>
+                                </div>
+                            </div>
+                            <div class="flex flex-wrap gap-1 mb-4">
+                                <span class="px-2 py-1 border border-blue-500 text-blue-700 dark:text-blue-300 text-xs rounded-full">Ciberseguridad</span>
+                                <span class="px-2 py-1 border border-green-500 text-green-700 dark:text-green-300 text-xs rounded-full">Google</span>
+                            </div>
+                            <a href="https://www.credly.com/badges/6aade594-0f06-46a6-9d02-21fc3aa01120/linked_in_profile" target="_blank" class="inline-flex items-center px-3 py-2 bg-primary-500 hover:bg-primary-600 text-white text-sm rounded-lg transition-colors duration-300 no-print">
+                                <i class="fas fa-external-link-alt mr-2"></i>
+                                Ver Credencial
+                            </a>
+                        </div>
+                        
+                        <!-- Programa especializado -->
+                        <div class="bg-gradient-to-br from-blue-50 to-green-50 dark:from-gray-800 dark:to-gray-700 rounded-xl p-6 border border-blue-200 dark:border-gray-600 animate-fade-in-up hover:shadow-lg transition-all duration-300" style="animation-delay: 0.1s;">
+                            <div class="flex items-center mb-4">
+                                <div class="w-10 h-10 bg-green-500 rounded-lg flex items-center justify-center mr-3">
+                                    <i class="fas fa-award text-white"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h4 class="font-bold text-gray-900 dark:text-white text-sm">Programa Especializado: Google Cybersecurity</h4>
+                                    <p class="text-xs text-gray-600 dark:text-gray-400">Feb 2025 • ID: YZ4CQM0U5UZW</p>
+                                </div>
+                            </div>
+                            <div class="flex flex-wrap gap-1 mb-4">
+                                <span class="px-2 py-1 border border-purple-500 text-purple-700 dark:text-purple-300 text-xs rounded-full">Especialización</span>
+                                <span class="px-2 py-1 border border-blue-500 text-blue-700 dark:text-blue-300 text-xs rounded-full">Certificado</span>
+                            </div>
+                            <a href="https://www.coursera.org/account/accomplishments/specialization/YZ4CQM0U5UZW" target="_blank" class="inline-flex items-center px-3 py-2 bg-primary-500 hover:bg-primary-600 text-white text-sm rounded-lg transition-colors duration-300 no-print">
+                                <i class="fas fa-external-link-alt mr-2"></i>
+                                Ver Credencial
+                            </a>
+                        </div>
+                        
+                        <!-- Automatizar tareas con Python -->
+                        <div class="bg-gradient-to-br from-blue-50 to-green-50 dark:from-gray-800 dark:to-gray-700 rounded-xl p-6 border border-blue-200 dark:border-gray-600 animate-fade-in-up hover:shadow-lg transition-all duration-300" style="animation-delay: 0.2s;">
+                            <div class="flex items-center mb-4">
+                                <div class="w-10 h-10 bg-yellow-500 rounded-lg flex items-center justify-center mr-3">
+                                    <i class="fab fa-python text-white"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h4 class="font-bold text-gray-900 dark:text-white text-sm">Automatizar tareas de seguridad con Python</h4>
+                                    <p class="text-xs text-gray-600 dark:text-gray-400">Dic 2024 • ID: UBFB7HG64CZ1</p>
+                                </div>
+                            </div>
+                            <div class="flex flex-wrap gap-1 mb-4">
+                                <span class="px-2 py-1 border border-yellow-500 text-yellow-700 dark:text-yellow-300 text-xs rounded-full">Python</span>
+                                <span class="px-2 py-1 border border-red-500 text-red-700 dark:text-red-300 text-xs rounded-full">Automatización</span>
+                            </div>
+                            <a href="https://www.coursera.org/account/accomplishments/verify/UBFB7HG64CZ1" target="_blank" class="inline-flex items-center px-3 py-2 bg-primary-500 hover:bg-primary-600 text-white text-sm rounded-lg transition-colors duration-300 no-print">
+                                <i class="fas fa-external-link-alt mr-2"></i>
+                                Ver Credencial
+                            </a>
+                        </div>
+                        
+                        <!-- Sound the Alarm -->
+                        <div class="bg-gradient-to-br from-blue-50 to-green-50 dark:from-gray-800 dark:to-gray-700 rounded-xl p-6 border border-blue-200 dark:border-gray-600 animate-fade-in-up hover:shadow-lg transition-all duration-300" style="animation-delay: 0.3s;">
+                            <div class="flex items-center mb-4">
+                                <div class="w-10 h-10 bg-red-500 rounded-lg flex items-center justify-center mr-3">
+                                    <i class="fas fa-exclamation-triangle text-white"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h4 class="font-bold text-gray-900 dark:text-white text-sm">Sound the Alarm: Detection and Response</h4>
+                                    <p class="text-xs text-gray-600 dark:text-gray-400">Dic 2024 • ID: GD6RXURC1W9Y</p>
+                                </div>
+                            </div>
+                            <div class="flex flex-wrap gap-1 mb-4">
+                                <span class="px-2 py-1 border border-red-500 text-red-700 dark:text-red-300 text-xs rounded-full">Detección</span>
+                                <span class="px-2 py-1 border border-orange-500 text-orange-700 dark:text-orange-300 text-xs rounded-full">Respuesta</span>
+                            </div>
+                            <a href="https://www.coursera.org/account/accomplishments/verify/GD6RXURC1W9Y" target="_blank" class="inline-flex items-center px-3 py-2 bg-primary-500 hover:bg-primary-600 text-white text-sm rounded-lg transition-colors duration-300 no-print">
+                                <i class="fas fa-external-link-alt mr-2"></i>
+                                Ver Credencial
+                            </a>
+                        </div>
+                        
+                        <!-- Assets, Threats, and Vulnerabilities -->
+                        <div class="bg-gradient-to-br from-blue-50 to-green-50 dark:from-gray-800 dark:to-gray-700 rounded-xl p-6 border border-blue-200 dark:border-gray-600 animate-fade-in-up hover:shadow-lg transition-all duration-300" style="animation-delay: 0.4s;">
+                            <div class="flex items-center mb-4">
+                                <div class="w-10 h-10 bg-purple-500 rounded-lg flex items-center justify-center mr-3">
+                                    <i class="fas fa-shield-alt text-white"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h4 class="font-bold text-gray-900 dark:text-white text-sm">Assets, Threats, and Vulnerabilities</h4>
+                                    <p class="text-xs text-gray-600 dark:text-gray-400">Nov 2024 • ID: 3JUX3OBBEQ2Z</p>
+                                </div>
+                            </div>
+                            <div class="flex flex-wrap gap-1 mb-4">
+                                <span class="px-2 py-1 border border-purple-500 text-purple-700 dark:text-purple-300 text-xs rounded-full">Vulnerabilidades</span>
+                                <span class="px-2 py-1 border border-indigo-500 text-indigo-700 dark:text-indigo-300 text-xs rounded-full">Amenazas</span>
+                            </div>
+                            <a href="https://www.coursera.org/account/accomplishments/verify/3JUX3OBBEQ2Z" target="_blank" class="inline-flex items-center px-3 py-2 bg-primary-500 hover:bg-primary-600 text-white text-sm rounded-lg transition-colors duration-300 no-print">
+                                <i class="fas fa-external-link-alt mr-2"></i>
+                                Ver Credencial
+                            </a>
+                        </div>
+                        
+                        <!-- Networks and Network Security -->
+                        <div class="bg-gradient-to-br from-blue-50 to-green-50 dark:from-gray-800 dark:to-gray-700 rounded-xl p-6 border border-blue-200 dark:border-gray-600 animate-fade-in-up hover:shadow-lg transition-all duration-300" style="animation-delay: 0.5s;">
+                            <div class="flex items-center mb-4">
+                                <div class="w-10 h-10 bg-cyan-500 rounded-lg flex items-center justify-center mr-3">
+                                    <i class="fas fa-network-wired text-white"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h4 class="font-bold text-gray-900 dark:text-white text-sm">Connect and Protect: Networks Security</h4>
+                                    <p class="text-xs text-gray-600 dark:text-gray-400">Nov 2024 • ID: DZWL22R7XZQB</p>
+                                </div>
+                            </div>
+                            <div class="flex flex-wrap gap-1 mb-4">
+                                <span class="px-2 py-1 border border-cyan-500 text-cyan-700 dark:text-cyan-300 text-xs rounded-full">Redes</span>
+                                <span class="px-2 py-1 border border-teal-500 text-teal-700 dark:text-teal-300 text-xs rounded-full">Seguridad</span>
+                            </div>
+                            <a href="https://www.coursera.org/account/accomplishments/verify/DZWL22R7XZQB" target="_blank" class="inline-flex items-center px-3 py-2 bg-primary-500 hover:bg-primary-600 text-white text-sm rounded-lg transition-colors duration-300 no-print">
+                                <i class="fas fa-external-link-alt mr-2"></i>
+                                Ver Credencial
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Additional Google Courses -->
+                <div class="mb-12">
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-6">Cursos Fundamentales</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-4 animate-fade-in-up hover:shadow-md transition-all duration-300">
+                            <div class="flex items-center mb-3">
+                                <div class="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center mr-3">
+                                    <i class="fas fa-foundation text-white text-sm"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h4 class="font-semibold text-gray-900 dark:text-white text-sm">Foundations of Cybersecurity</h4>
+                                    <p class="text-xs text-gray-600 dark:text-gray-400">Nov 2024</p>
+                                </div>
+                            </div>
+                            <a href="https://www.coursera.org/account/accomplishments/verify/D6VHHLDJLWEJ" target="_blank" class="inline-flex items-center px-2 py-1 bg-primary-500 hover:bg-primary-600 text-white text-xs rounded transition-colors duration-300 no-print">
+                                <i class="fas fa-external-link-alt mr-1"></i>
+                                Ver
+                            </a>
+                        </div>
+                        
+                        <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-4 animate-fade-in-up hover:shadow-md transition-all duration-300" style="animation-delay: 0.1s;">
+                            <div class="flex items-center mb-3">
+                                <div class="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center mr-3">
+                                    <i class="fas fa-user-shield text-white text-sm"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h4 class="font-semibold text-gray-900 dark:text-white text-sm">Play It Safe: Manage Security Risks</h4>
+                                    <p class="text-xs text-gray-600 dark:text-gray-400">Nov 2024</p>
+                                </div>
+                            </div>
+                            <a href="https://www.coursera.org/account/accomplishments/verify/SHI7MO79ICDZ" target="_blank" class="inline-flex items-center px-2 py-1 bg-primary-500 hover:bg-primary-600 text-white text-xs rounded transition-colors duration-300 no-print">
+                                <i class="fas fa-external-link-alt mr-1"></i>
+                                Ver
+                            </a>
+                        </div>
+                        
+                        <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-4 animate-fade-in-up hover:shadow-md transition-all duration-300" style="animation-delay: 0.2s;">
+                            <div class="flex items-center mb-3">
+                                <div class="w-8 h-8 bg-gray-700 rounded-lg flex items-center justify-center mr-3">
+                                    <i class="fab fa-linux text-white text-sm"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h4 class="font-semibold text-gray-900 dark:text-white text-sm">Tools of the Trade: Linux and SQL</h4>
+                                    <p class="text-xs text-gray-600 dark:text-gray-400">Nov 2024</p>
+                                </div>
+                            </div>
+                            <a href="https://www.coursera.org/account/accomplishments/verify/P5VH88BZNWN8" target="_blank" class="inline-flex items-center px-2 py-1 bg-primary-500 hover:bg-primary-600 text-white text-xs rounded transition-colors duration-300 no-print">
+                                <i class="fas fa-external-link-alt mr-1"></i>
+                                Ver
+                            </a>
+                        </div>
+                        
+                        <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-4 animate-fade-in-up hover:shadow-md transition-all duration-300" style="animation-delay: 0.3s;">
+                            <div class="flex items-center mb-3">
+                                <div class="w-8 h-8 bg-red-500 rounded-lg flex items-center justify-center mr-3">
+                                    <i class="fas fa-lock text-white text-sm"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h4 class="font-semibold text-gray-900 dark:text-white text-sm">Ve a lo seguro: Gestiona riesgos</h4>
+                                    <p class="text-xs text-gray-600 dark:text-gray-400">Sep 2024</p>
+                                </div>
+                            </div>
+                            <a href="https://www.coursera.org/account/accomplishments/certificate/MNNRXDVCHSTS" target="_blank" class="inline-flex items-center px-2 py-1 bg-primary-500 hover:bg-primary-600 text-white text-xs rounded transition-colors duration-300 no-print">
+                                <i class="fas fa-external-link-alt mr-1"></i>
+                                Ver
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Platzi Certificate -->
+                <div class="mb-8">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-r from-green-400 to-blue-500 rounded-xl flex items-center justify-center mr-4">
+                            <i class="fas fa-code text-white text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Platzi</h3>
+                            <p class="text-gray-600 dark:text-gray-400">Desarrollo y programación</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-green-50 to-blue-50 dark:from-gray-800 dark:to-gray-700 rounded-xl p-6 border border-green-200 dark:border-gray-600 animate-fade-in-up hover:shadow-lg transition-all duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-server text-white"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="text-lg font-bold text-gray-900 dark:text-white">Desarrollo Backend con PHP</h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Marzo 2020</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 dark:text-gray-300 mb-4">
+                            Certificación completa en desarrollo backend con PHP, incluyendo frameworks modernos, 
+                            bases de datos y mejores prácticas de desarrollo.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 border border-blue-500 text-blue-700 dark:text-blue-300 text-sm rounded-full">PHP</span>
+                            <span class="px-3 py-1 border border-red-500 text-red-700 dark:text-red-300 text-sm rounded-full">Laravel</span>
+                            <span class="px-3 py-1 border border-green-500 text-green-700 dark:text-green-300 text-sm rounded-full">Backend</span>
+                            <span class="px-3 py-1 border border-purple-500 text-purple-700 dark:text-purple-300 text-sm rounded-full">APIs</span>
+                        </div>
+                        <a href="https://platzi.com/p/Dronico/ruta/10-desarrollo-php/diploma/detalle/" target="_blank" class="inline-flex items-center px-4 py-2 bg-primary-500 hover:bg-primary-600 text-white text-sm rounded-lg transition-colors duration-300 no-print">
+                            <i class="fas fa-external-link-alt mr-2"></i>
+                            Ver Certificado
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Stats Summary -->
+                <div class="bg-gradient-to-r from-zinc-600 to-zinc-800 rounded-2xl p-8 text-white text-center animate-fade-in-up">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div>
+                            <div class="text-4xl font-bold mb-2">14+</div>
+                            <div class="text-blue-100">Certificaciones</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-bold mb-2">2</div>
+                            <div class="text-blue-100">Proveedores</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-bold mb-2">2024-25</div>
+                            <div class="text-blue-100">Más recientes</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="py-20 bg-gray-50 dark:bg-gray-800">
         <div class="container mx-auto px-6">
             <h2 class="text-4xl font-bold text-center mb-16 text-gray-900 dark:text-white animate-fade-in-up">
                 Formación <span class="text-primary-500">Académica</span>
             </h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 animate-fade-in-up">
+                <div class="bg-white dark:bg-gray-900 rounded-xl p-6 animate-fade-in-up">
                     <div class="flex items-center mb-4">
                         <div class="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mr-4">
                             <i class="fas fa-graduation-cap text-white"></i>
@@ -686,7 +977,7 @@
                     <p class="text-gray-600 dark:text-gray-400">+15 cursos terminados en desarrollo backend</p>
                 </div>
                 
-                <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 animate-fade-in-up" style="animation-delay: 0.1s;">
+                <div class="bg-white dark:bg-gray-900 rounded-xl p-6 animate-fade-in-up" style="animation-delay: 0.1s;">
                     <div class="flex items-center mb-4">
                         <div class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mr-4">
                             <i class="fas fa-university text-white"></i>
@@ -699,7 +990,7 @@
                     <p class="text-gray-600 dark:text-gray-400">1° Semestre en curso</p>
                 </div>
                 
-                <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 animate-fade-in-up" style="animation-delay: 0.2s;">
+                <div class="bg-white dark:bg-gray-900 rounded-xl p-6 animate-fade-in-up" style="animation-delay: 0.2s;">
                     <div class="flex items-center mb-4">
                         <div class="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mr-4">
                             <i class="fas fa-laptop-code text-white"></i>
@@ -712,7 +1003,7 @@
                     <p class="text-gray-600 dark:text-gray-400">9° Semestre sin terminar</p>
                 </div>
                 
-                <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 animate-fade-in-up" style="animation-delay: 0.3s;">
+                <div class="bg-white dark:bg-gray-900 rounded-xl p-6 animate-fade-in-up" style="animation-delay: 0.3s;">
                     <div class="flex items-center mb-4">
                         <div class="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center mr-4">
                             <i class="fas fa-paint-brush text-white"></i>
