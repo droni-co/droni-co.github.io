@@ -73,7 +73,7 @@ const stats = [
 </script>
 
 <template>
-  <section id="certifications" class="bg-white py-24 dark:bg-gray-950">
+  <section id="certifications" class="bg-white py-24 print:!py-10 print:break-before-page dark:bg-gray-950">
     <div class="container mx-auto px-6">
       <div v-reveal class="mb-12 text-center">
         <p class="mb-2 font-mono text-sm font-semibold tracking-widest text-indigo-500 uppercase">Aprendizaje continuo</p>

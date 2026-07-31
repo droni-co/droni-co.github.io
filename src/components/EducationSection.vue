@@ -11,7 +11,7 @@ const education = [
 </script>
 
 <template>
-  <section id="education" class="relative overflow-hidden bg-gray-50 py-24 dark:bg-gray-900">
+  <section id="education" class="relative overflow-hidden bg-gray-50 py-24 print:!py-10 print:break-before-page dark:bg-gray-900">
     <img
       :src="educationIllustration"
       alt=""
